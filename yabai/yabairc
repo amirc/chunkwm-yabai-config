@@ -1,4 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/zsh
+
+# ===== Hack ===================================
+# the scripting-addition must be loaded manually if
+# you are running yabai on macOS Big Sur. Uncomment
+# the following line to have the injection performed
+# when the config is executed during startup.
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
 
 # ====== Variables =============================
 
@@ -60,6 +73,10 @@ yabai -m rule --add label="mpv" app="^mpv$" manage=off
 yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
 yabai -m rule --add label="Transmission" app="^Transmission$" manage=off
 yabai -m rule --add label="VirtualBox" app="^VirtualBox$" manage=off
+yabai -m rule --add label="zoom" app="^[zZ]oom(\.us)?$" manage=off
+yabai -m rule --add label="pycharm" app="^PyCharm$" title="^(Tip of the Day)$" manage=off
+yabai -m rule --add label="Slack" app="^Slack.*$" title="(Slack call.*)" manage=off
+yabai -m rule --add label="Calendar" app="^Calendar$" manage=off
 
 
 # ====== Simple Bar ===========================
@@ -92,3 +109,8 @@ yabai -m signal --add event=window_destroyed action="osascript -e 'tell applicat
 yabai -m signal --add event=window_title_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
 
 # ====== Custom ===============================
+
+# for screens
+export Y_SCREEN_1=12
+export Y_SCREEN_2=1
+export Y_SCREEN_3=30

@@ -24,25 +24,57 @@ shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east || (yabai -m window --display east && yabai -m display --focus east)
 
+
+
+lctrl + shift - 1 : yabai -m space --focus $((Y_SCREEN_3+0))
+lctrl + shift - 2 : yabai -m space --focus $((Y_SCREEN_3+1))
+lctrl - 1 : yabai -m space --focus $((Y_SCREEN_1+0))
+lctrl - 2 : yabai -m space --focus $((Y_SCREEN_1+1))
+lctrl - 3 : yabai -m space --focus $((Y_SCREEN_1+2))
+lctrl - 4 : yabai -m space --focus $((Y_SCREEN_1+3))
+lctrl - 5 : yabai -m space --focus $((Y_SCREEN_1+4))
+lctrl - 6 : yabai -m space --focus $((Y_SCREEN_1+5))
+lctrl - 7 : yabai -m space --focus $((Y_SCREEN_1+6))
+lctrl - 8 : yabai -m space --focus $((Y_SCREEN_1+7))
+lctrl - 9 : yabai -m space --focus $((Y_SCREEN_1+8))
+lctrl - 0 : yabai -m space --focus $((Y_SCREEN_1+9))
+lctrl - 0x53 : yabai -m space --focus $((Y_SCREEN_2+0))
+lctrl - 0x54 : yabai -m space --focus $((Y_SCREEN_2+1))
+lctrl - 0x55 : yabai -m space --focus $((Y_SCREEN_2+2))
+lctrl - 0x56 : yabai -m space --focus $((Y_SCREEN_2+3))
+lctrl - 0x57 : yabai -m space --focus $((Y_SCREEN_2+4))
+lctrl - 0x58 : yabai -m space --focus $((Y_SCREEN_2+5))
+lctrl - 0x59 : yabai -m space --focus $((Y_SCREEN_2+6))
+lctrl - 0x5B : yabai -m space --focus $((Y_SCREEN_2+7))
+lctrl - 0x5C : yabai -m space --focus $((Y_SCREEN_2+8))
+lctrl - 0x52 : yabai -m space --focus $((Y_SCREEN_2+9))
+
+
+
 # Move focus container to workspace
 shift + alt - m : yabai -m window --space last && yabai -m space --focus last
 shift + alt - p : yabai -m window --space prev && yabai -m space --focus prev
 shift + alt - n : yabai -m window --space next && yabai -m space --focus next
-shift + alt - 1 : yabai -m window --space 3 && yabai -m space --focus 3
-shift + alt - 2 : yabai -m window --space 4 && yabai -m space --focus 4
-shift + alt - 3 : yabai -m window --space 5 && yabai -m space --focus 5
-shift + alt - 4 : yabai -m window --space 6 && yabai -m space --focus 6
-shift + alt - 5 : yabai -m window --space 7 && yabai -m space --focus 7
-shift + alt - 6 : yabai -m window --space 8 && yabai -m space --focus 8
-shift + alt - 7 : yabai -m window --space 9 && yabai -m space --focus 9
-shift + alt - 8 : yabai -m window --space 10 && yabai -m space --focus 10
-shift + alt - 9 : yabai -m window --space 11 && yabai -m space --focus 11
-shift + alt - 0 : yabai -m window --space 12 && yabai -m space --focus 11
-shift + alt - 0x53 : yabai -m window --space 13 && yabai -m space --focus 12
-shift + alt - 0x54 : yabai -m window --space 14 && yabai -m space --focus 12
-shift + alt - 0x55 : yabai -m window --space 15 && yabai -m space --focus 12
-shift + alt - 0x56 : yabai -m window --space 16 && yabai -m space --focus 12
-shift + alt - 0x57 : yabai -m window --space 17 && yabai -m space --focus 12
+shift + alt - 1 : yabai -m window --space $((Y_SCREEN_1+0)) && yabai -m space --focus $((Y_SCREEN_1+0))
+shift + alt - 2 : yabai -m window --space $((Y_SCREEN_1+1)) && yabai -m space --focus $((Y_SCREEN_1+1))
+shift + alt - 3 : yabai -m window --space $((Y_SCREEN_1+2)) && yabai -m space --focus $((Y_SCREEN_1+2))
+shift + alt - 4 : yabai -m window --space $((Y_SCREEN_1+3)) && yabai -m space --focus $((Y_SCREEN_1+3))
+shift + alt - 5 : yabai -m window --space $((Y_SCREEN_1+4)) && yabai -m space --focus $((Y_SCREEN_1+4))
+shift + alt - 6 : yabai -m window --space $((Y_SCREEN_1+5)) && yabai -m space --focus $((Y_SCREEN_1+5))
+shift + alt - 7 : yabai -m window --space $((Y_SCREEN_1+6)) && yabai -m space --focus $((Y_SCREEN_1+6))
+shift + alt - 8 : yabai -m window --space $((Y_SCREEN_1+7)) && yabai -m space --focus $((Y_SCREEN_1+7))
+shift + alt - 9 : yabai -m window --space $((Y_SCREEN_1+8)) && yabai -m space --focus $((Y_SCREEN_1+8))
+shift + alt - 0 : yabai -m window --space $((Y_SCREEN_1+9)) && yabai -m space --focus $((Y_SCREEN_1+9))
+shift + alt - 0x53 : yabai -m window --space $((Y_SCREEN_2+0)) && yabai -m space --focus $((Y_SCREEN_2+0))
+shift + alt - 0x54 : yabai -m window --space $((Y_SCREEN_2+1)) && yabai -m space --focus $((Y_SCREEN_2+1))
+shift + alt - 0x55 : yabai -m window --space $((Y_SCREEN_2+2)) && yabai -m space --focus $((Y_SCREEN_2+2))
+shift + alt - 0x56 : yabai -m window --space $((Y_SCREEN_2+3)) && yabai -m space --focus $((Y_SCREEN_2+3))
+shift + alt - 0x57 : yabai -m window --space $((Y_SCREEN_2+4)) && yabai -m space --focus $((Y_SCREEN_2+4))
+shift + alt - 0x58 : yabai -m window --space $((Y_SCREEN_2+5)) && yabai -m space --focus $((Y_SCREEN_2+5))
+shift + alt - 0x59 : yabai -m window --space $((Y_SCREEN_2+6)) && yabai -m space --focus $((Y_SCREEN_2+6))
+shift + alt - 0x5B : yabai -m window --space $((Y_SCREEN_2+7)) && yabai -m space --focus $((Y_SCREEN_2+7))
+shift + alt - 0x5C : yabai -m window --space $((Y_SCREEN_2+8)) && yabai -m space --focus $((Y_SCREEN_2+8))
+shift + alt - 0x52 : yabai -m window --space $((Y_SCREEN_2+9)) && yabai -m space --focus $((Y_SCREEN_2+9))
 
 # Resize windows
 lctrl + alt - h : \
@@ -93,6 +125,12 @@ shift + lctrl + alt - r :
     /usr/bin/env osascript <<< \
         "display notification \"Restarting Yabai\" with title \"Yabai\""; \
     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+# Debug
+shift + lctrl + alt - o : 
+    #export Y_SCREEN_1=12; export Y_SCREEN_2=1; export Y_SCREEN_3=30; \
+    /usr/bin/env osascript <<< \
+        "display notification \"screen1: $((Y_SCREEN_1)) screen2:  $((Y_SCREEN_2))\" with title \"Yabai\""
 
 # Make window native fullscreen
 alt - f         : yabai -m window --toggle zoom-fullscreen
